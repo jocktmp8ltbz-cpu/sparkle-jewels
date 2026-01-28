@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deploy Sparkle Jewels - Free Hosting Guide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+        
+        .header p {
+            color: #7f8c8d;
+            font-size: 1.2rem;
+        }
+        
+        .deployment-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .option-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 3px solid transparent;
+        }
+        
+        .option-card:hover {
+            transform: translateY(-5px);
+            border-color: #d4af37;
+        }
+        
+        .option-card.recommended {
+            border-color: #27ae60;
+            background: #e8f5e8;
+        }
+        
+        .option-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #d4af37;
+        }
+        
+        .option-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        .option-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+        
+        .deploy-btn {
+            background: linear-gradient(45deg, #d4af37, #f1c40f);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .deploy-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        }
+        
+        .recommended-badge {
+            background: #27ae60;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        
+        .steps {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+        }
+        
+        .steps h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        .step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 10px;
+        }
+        
+        .step-number {
+            background: #d4af37;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-weight: bold;
+        }
+        
+        .back-btn {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i>
+        Back to Website
+    </a>
+    
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-rocket"></i> Deploy Sparkle Jewels</h1>
+            <p>Make your jewelry website live for FREE in minutes!</p>
+        </div>
+        
+        <div class="deployment-options">
+            <div class="option-card recommended">
+                <div class="recommended-badge">Recommended</div>
+                <div class="option-icon">
+                    <i class="fab fa-github"></i>
+                </div>
+                <h3>GitHub Pages</h3>
+                <p>100% Free hosting with custom domain support. Perfect for beginners!</p>
+                <a href="https://github.com" target="_blank" class="deploy-btn">
+                    <i class="fas fa-external-link-alt"></i> Deploy on GitHub
+                </a>
+            </div>
+            
+            <div class="option-card">
+                <div class="option-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>Netlify</h3>
+                <p>Drag & drop deployment. Instant live website with just one click!</p>
+                <a href="https://netlify.com" target="_blank" class="deploy-btn">
+                    <i class="fas fa-external-link-alt"></i> Deploy on Netlify
+                </a>
+            </div>
+            
+            <div class="option-card">
+                <div class="option-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Vercel</h3>
+                <p>Lightning fast deployment with automatic updates from GitHub.</p>
+                <a href="https://vercel.com" target="_blank" class="deploy-btn">
+                    <i class="fas fa-external-link-alt"></i> Deploy on Vercel
+                </a>
+            </div>
+        </div>
+        
+        <div class="steps">
+            <h3><i class="fas fa-list-ol"></i> Quick Start Guide (GitHub Pages)</h3>
+            
+            <div class="step">
+                <div class="step-number">1</div>
+                <div>
+                    <strong>Create GitHub Account</strong><br>
+                    Sign up for free at github.com
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <div>
+                    <strong>Create New Repository</strong><br>
+                    Name it "sparkle-jewels" and make it public
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <div>
+                    <strong>Upload All Files</strong><br>
+                    Drag and drop all website files to your repository
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">4</div>
+                <div>
+                    <strong>Enable GitHub Pages</strong><br>
+                    Go to Settings → Pages → Select "main" branch
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">5</div>
+                <div>
+                    <strong>Your Website is Live!</strong><br>
+                    Access at: https://yourusername.github.io/sparkle-jewels
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 2rem; padding: 2rem; background: #e8f5e8; border-radius: 15px;">
+            <h3 style="color: #27ae60; margin-bottom: 1rem;">
+                <i class="fas fa-check-circle"></i> Your Website Will Include:
+            </h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                <div>✅ Customer Shopping Site</div>
+                <div>✅ Admin Management Panel</div>
+                <div>✅ Live Order Tracking</div>
+                <div>✅ Image Upload System</div>
+                <div>✅ Mobile Responsive</div>
+                <div>✅ Free SSL Certificate</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

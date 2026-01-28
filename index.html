@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparkle Jewels - Premium Artificial Jewelry</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-gem"></i>
+                <h1>Sparkle Jewels</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button class="track-order-btn" onclick="showTrackingModal()">Track Order</button>
+                <i class="fas fa-search"></i>
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Slider Section -->
+        <section id="home" class="hero-slider">
+            <div class="slider-container">
+                <div class="slide active">
+                    <div class="slide-content">
+                        <h2>Exquisite Artificial Jewelry</h2>
+                        <p>Discover our stunning collection of premium artificial jewelry</p>
+                        <button class="cta-button">Shop Now</button>
+                    </div>
+                    <div class="slide-bg" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 800%22><rect fill=%22%23d4af37%22 width=%221200%22 height=%22800%22/><circle fill=%22%23ffd700%22 cx=%22300%22 cy=%22200%22 r=%2250%22/><circle fill=%22%23ffd700%22 cx=%22900%22 cy=%22600%22 r=%2270%22/></svg>'); background-size: cover;"></div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <h2>Elegant Necklace Collection</h2>
+                        <p>Beautiful necklaces for every occasion</p>
+                        <button class="cta-button">Explore Collection</button>
+                    </div>
+                    <div class="slide-bg" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 800%22><rect fill=%22%23c0392b%22 width=%221200%22 height=%22800%22/><circle fill=%22%23e74c3c%22 cx=%22600%22 cy=%22400%22 r=%22100%22/></svg>'); background-size: cover;"></div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <h2>Bridal Special Collection</h2>
+                        <p>Make your special day more beautiful</p>
+                        <button class="cta-button">View Bridal Sets</button>
+                    </div>
+                    <div class="slide-bg" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 800%22><rect fill=%22%238e44ad%22 width=%221200%22 height=%22800%22/><polygon fill=%22%239b59b6%22 points=%22600,200 650,300 550,300%22/></svg>'); background-size: cover;"></div>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="slider-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Sparkle Jewels</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>We are passionate about creating exquisite artificial jewelry that combines elegance with affordability. Our collection features premium quality pieces that look and feel like real jewelry.</p>
+                        <div class="features">
+                            <div class="feature">
+                                <i class="fas fa-star"></i>
+                                <span>Premium Quality</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-shipping-fast"></i>
+                                <span>Fast Delivery</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-undo"></i>
+                                <span>Easy Returns</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <div class="jewelry-showcase">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jewelry Gallery -->
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <h2>Jewelry Gallery</h2>
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="necklaces">Necklaces</button>
+                    <button class="filter-btn" data-filter="earrings">Earrings</button>
+                    <button class="filter-btn" data-filter="bracelets">Bracelets</button>
+                    <button class="filter-btn" data-filter="rings">Rings</button>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="necklaces" data-product-id="1">
+                        <div class="item-image">
+                            <div class="jewelry-placeholder necklace">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <h3>Golden Pearl Necklace</h3>
+                            <p class="price">₹2,999</p>
+                            <button class="buy-now-btn" onclick="buyNow(1)">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="earrings" data-product-id="2">
+                        <div class="item-image">
+                            <div class="jewelry-placeholder earring">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <h3>Diamond Drop Earrings</h3>
+                            <p class="price">₹1,599</p>
+                            <button class="buy-now-btn" onclick="buyNow(2)">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="bracelets" data-product-id="3">
+                        <div class="item-image">
+                            <div class="jewelry-placeholder bracelet">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <h3>Silver Chain Bracelet</h3>
+                            <p class="price">₹899</p>
+                            <button class="buy-now-btn" onclick="buyNow(3)">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="rings" data-product-id="4">
+                        <div class="item-image">
+                            <div class="jewelry-placeholder ring">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <h3>Royal Ruby Ring</h3>
+                            <p class="price">₹1,299</p>
+                            <button class="buy-now-btn" onclick="buyNow(4)">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="necklaces" data-product-id="5">
+                        <div class="item-image">
+                            <div class="jewelry-placeholder necklace">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <h3>Heart Pendant Set</h3>
+                            <p class="price">₹2,199</p>
+                            <button class="buy-now-btn" onclick="buyNow(5)">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="earrings" data-product-id="6">
+                        <div class="item-image">
+                            <div class="jewelry-placeholder earring">
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <h3>Star Stud Earrings</h3>
+                            <p class="price">₹799</p>
+                            <button class="buy-now-btn" onclick="buyNow(6)">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Collections Section -->
+        <section id="collections" class="collections">
+            <div class="container">
+                <h2>Our Collections</h2>
+                <div class="collection-grid">
+                    <div class="collection-card">
+                        <div class="collection-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h3>Bridal Collection</h3>
+                        <p>Stunning bridal sets for your special day</p>
+                        <button class="collection-btn">View Collection</button>
+                    </div>
+                    <div class="collection-card">
+                        <div class="collection-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Party Wear</h3>
+                        <p>Glamorous jewelry for parties and events</p>
+                        <button class="collection-btn">View Collection</button>
+                    </div>
+                    <div class="collection-card">
+                        <div class="collection-icon">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <h3>Daily Wear</h3>
+                        <p>Elegant pieces for everyday styling</p>
+                        <button class="collection-btn">View Collection</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>123 Jewelry Street, Fashion District, Mumbai 400001</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+91 98765 43210</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@sparklejewels.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="tel" placeholder="Your Phone" required>
+                        <textarea placeholder="Your Message" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-gem"></i> Sparkle Jewels</h3>
+                    <p>Premium artificial jewelry for every occasion</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#collections">Collections</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Care Instructions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sparkle Jewels. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+    <!-- Order Tracking Modal -->
+    <div id="order-tracking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Track Your Order</h3>
+            <div class="tracking-form">
+                <input type="text" id="tracking-input" placeholder="Enter Order ID or Tracking Number">
+                <button onclick="trackOrder()">Track Order</button>
+            </div>
+            <div id="tracking-result"></div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Complete Your Order</h3>
+            <form id="checkout-form">
+                <div class="checkout-sections">
+                    <div class="customer-details">
+                        <h4>Customer Details</h4>
+                        <div class="form-group">
+                            <input type="text" id="customer-name" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="customer-email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="customer-phone" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="customer-address" placeholder="Complete Address" required></textarea>
+                        </div>
+                    </div>
+                    <div class="order-summary">
+                        <h4>Order Summary</h4>
+                        <div id="order-details">
+                            <!-- Order details will be populated here -->
+                        </div>
+                        <div class="total-amount">
+                            <strong>Total: <span id="total-amount">₹0</span></strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment-section">
+                    <h4>Payment Method</h4>
+                    <div class="payment-options">
+                        <label>
+                            <input type="radio" name="payment" value="cod" checked>
+                            <span>Cash on Delivery</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="payment" value="online">
+                            <span>Online Payment</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" onclick="closeCheckoutModal()">Cancel</button>
+                    <button type="submit">Place Order</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Order Success Modal -->
+    <div id="order-success-modal" class="modal">
+        <div class="modal-content success-modal">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Order Placed Successfully!</h3>
+            <div id="order-success-details">
+                <!-- Success details will be populated here -->
+            </div>
+            <div class="success-actions">
+                <button onclick="closeSuccessModal()">Continue Shopping</button>
+                <button onclick="trackNewOrder()">Track Order</button>
+            </div>
+        </div>
+    </div>
