@@ -1112,6 +1112,24 @@ footer {
     color: white;
 }
 
+.find-order-btn {
+    background: transparent;
+    border: 2px solid #3498db;
+    color: #3498db;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+    font-size: 0.9rem;
+}
+
+.find-order-btn:hover {
+    background: #3498db;
+    color: white;
+}
+
 /* Responsive Design for Modals */
 @media (max-width: 768px) {
     .modal-content {
@@ -1173,4 +1191,105 @@ footer {
     height: 250px;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
+}
+
+/* Item Overlay for Hover Effects */
+.item-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .item-overlay {
+    opacity: 1;
+}
+
+.quick-view-btn {
+    background: rgba(212, 175, 55, 0.9);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.quick-view-btn:hover {
+    background: #d4af37;
+    transform: translateY(-2px);
+}
+
+/* Item Actions */
+.item-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.add-to-cart-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    flex: 1;
+    font-size: 0.9rem;
+}
+
+.add-to-cart-btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+.buy-now-btn {
+    background: linear-gradient(45deg, #d4af37, #f1c40f);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    flex: 1;
+    font-size: 0.9rem;
+}
+
+.buy-now-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+/* Cart Badge */
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    animation: pulse 2s infinite;
 }

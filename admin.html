@@ -3,12 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel - Sparkle Jewels</title>
+    <title>Admin Login - Sparkle Jewels</title>
     <link rel="stylesheet" href="admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="admin-container">
+    <!-- Login/Signup Screen -->
+    <div id="auth-screen" class="auth-screen">
+        <div class="auth-container">
+            <div class="auth-header">
+                <div class="logo">
+                    <i class="fas fa-gem"></i>
+                    <h1>Sparkle Jewels</h1>
+                </div>
+                <h2 id="auth-title">Admin Login</h2>
+                <p id="auth-subtitle">Access your admin dashboard</p>
+            </div>
+            
+            <!-- Login Form -->
+            <form id="login-form" class="auth-form">
+                <div class="form-group">
+                    <label for="login-email">Email Address</label>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="login-email" placeholder="Enter your email" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="login-password" placeholder="Enter your password" required>
+                        <button type="button" class="toggle-password" onclick="togglePassword('login-password')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="form-options">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="remember-me">
+                        <span class="checkmark"></span>
+                        Remember me
+                    </label>
+                    <a href="#" onclick="showForgotPassword()" class="forgot-link">Forgot Password?</a>
+                </div>
+                
+                <button type="submit" class="auth-btn">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Login to Dashboard
+                </button>
+                
+                <div class="auth-switch">
+                    <p>Don't have an admin account? <a href="#" onclick="showSignup()">Create Account</a></p>
+                </div>
+            </form>
+            
+            <!-- Signup Form -->
+            <form id="signup-form" class="auth-form" style="display: none;">
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="signup-name" placeholder="Enter your full name" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="signup-email">Email Address</label>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="signup-email" placeholder="Enter your email" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="signup-password" placeholder="Create a password" required>
+                        <button type="button" class="toggle-password" onclick="togglePassword('signup-password')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="password-strength" id="password-strength"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="admin-code">Admin Access Code</label>
+                    <div class="input-group">
+                        <i class="fas fa-key"></i>
+                        <input type="text" id="admin-code" placeholder="Enter admin access code" required>
+                    </div>
+                    <small class="form-hint">Contact system administrator for access code</small>
+                </div>
+                
+                <div class="form-options">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="agree-terms" required>
+                        <span class="checkmark"></span>
+                        I agree to the <a href="#" onclick="showTerms()">Terms & Conditions</a>
+                    </label>
+                </div>
+                
+                <button type="submit" class="auth-btn">
+                    <i class="fas fa-user-plus"></i>
+                    Create Admin Account
+                </button>
+                
+                <div class="auth-switch">
+                    <p>Already have an account? <a href="#" onclick="showLogin()">Login Here</a></p>
+                </div>
+            </form>
+            
+            <!-- Forgot Password Form -->
+            <form id="forgot-form" class="auth-form" style="display: none;">
+                <div class="form-group">
+                    <label for="forgot-email">Email Address</label>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="forgot-email" placeholder="Enter your email" required>
+                    </div>
+                </div>
+                
+                <button type="submit" class="auth-btn">
+                    <i class="fas fa-paper-plane"></i>
+                    Send Reset Link
+                </button>
+                
+                <div class="auth-switch">
+                    <p>Remember your password? <a href="#" onclick="showLogin()">Back to Login</a></p>
+                </div>
+            </form>
+        </div>
+        
+        <div class="auth-footer">
+            <p>&copy; 2026 Sparkle Jewels. All rights reserved.</p>
+            <div class="auth-links">
+                <a href="index.html">Back to Website</a>
+                <a href="#" onclick="showHelp()">Need Help?</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Admin Panel (Hidden initially) -->
+    <div id="admin-panel" style="display: none;">
+        <div class="admin-container">noo</div>
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="logo">
@@ -37,7 +186,15 @@
                     </button>
                     <div class="admin-profile">
                         <i class="fas fa-user-circle"></i>
-                        <span>Admin</span>
+                        <span id="admin-name">Admin</span>
+                        <button onclick="showAdminMenu()" class="admin-menu-btn">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div id="admin-menu" class="admin-dropdown" style="display: none;">
+                            <a href="#" onclick="showProfile()"><i class="fas fa-user"></i> Profile</a>
+                            <a href="#" onclick="showSettings()"><i class="fas fa-cog"></i> Settings</a>
+                            <a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
                     </div>
                 </div>
             </header>
@@ -110,6 +267,9 @@
                 <div class="section-header">
                     <h3>All Orders</h3>
                     <div class="filters">
+                        <input type="text" id="order-search" placeholder="Search orders..." 
+                               style="padding: 8px 15px; border: 1px solid #ddd; border-radius: 5px; margin-right: 10px; width: 200px;"
+                               onkeyup="searchOrders(this.value)">
                         <select id="status-filter">
                             <option value="all">All Status</option>
                             <option value="pending">Pending</option>
@@ -117,6 +277,9 @@
                             <option value="shipped">Shipped</option>
                             <option value="delivered">Delivered</option>
                         </select>
+                        <button onclick="exportOrders()" style="background: #27ae60; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; margin-left: 10px;">
+                            <i class="fas fa-download"></i> Export
+                        </button>
                     </div>
                 </div>
                 <div class="table-container">
@@ -141,18 +304,20 @@
 
             <!-- Customers Section -->
             <section id="customers" class="content-section">
-                <h3>Customer Management</h3>
+                <h3>Customer Database Management</h3>
+                <!-- Customer search and controls will be added dynamically -->
                 <div class="table-container">
                     <table id="customers-table">
                         <thead>
                             <tr>
                                 <th>Customer ID</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Phone</th>
+                                <th>Customer Info</th>
                                 <th>Total Orders</th>
                                 <th>Total Spent</th>
                                 <th>Join Date</th>
+                                <th>Last Order</th>
+                                <th>Status</th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -160,6 +325,7 @@
                         </tbody>
                     </table>
                 </div>
+            </section>
             </section>
 
             <!-- Products Section -->
@@ -242,6 +408,9 @@
             <div id="order-details-content">
                 <!-- Order details will be populated here -->
             </div>
+        </div>
+    </div>
+
         </div>
     </div>
 

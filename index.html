@@ -23,6 +23,7 @@
             </ul>
             <div class="nav-icons">
                 <button class="track-order-btn" onclick="showTrackingModal()">Track Order</button>
+                <button class="find-order-btn" onclick="showOrderRetrievalSystem()" style="background: transparent; border: 2px solid #3498db; color: #3498db; padding: 8px 15px; border-radius: 20px; cursor: pointer; font-weight: 500; margin-left: 10px; font-size: 0.9rem;">Find My Order</button>
                 <i class="fas fa-search"></i>
                 <i class="fas fa-shopping-cart"></i>
             </div>
@@ -311,6 +312,7 @@
             <div class="tracking-form">
                 <input type="text" id="tracking-input" placeholder="Enter Order ID or Tracking Number">
                 <button onclick="trackOrder()">Track Order</button>
+                <button type="button" onclick="closeTrackingModal()" style="background: #95a5a6; margin-left: 10px;">Cancel</button>
             </div>
             <div id="tracking-result"></div>
         </div>
@@ -382,6 +384,7 @@
             <div class="success-actions">
                 <button onclick="closeSuccessModal()">Continue Shopping</button>
                 <button onclick="trackNewOrder()">Track Order</button>
+                <button onclick="showOrderRetrievalSystem()" style="background: #3498db;">Find All Orders</button>
             </div>
         </div>
     </div>

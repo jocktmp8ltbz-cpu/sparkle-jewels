@@ -77,6 +77,7 @@
             <div class="tracking-form">
                 <input type="text" id="tracking-input" placeholder="Enter Order ID or Tracking Number">
                 <button onclick="trackOrder()">Track Order</button>
+                <button type="button" onclick="clearTracking()" style="background: #95a5a6; margin-left: 10px;">Clear</button>
             </div>
             
             <div id="tracking-result"></div>
@@ -84,5 +85,16 @@
     </div>
     
     <script src="script.js"></script>
+    <script>
+        // Additional function for standalone tracking page
+        function clearTracking() {
+            document.getElementById('tracking-input').value = '';
+            document.getElementById('tracking-result').innerHTML = '';
+            // Stop live tracking if active
+            if (typeof liveTrackingInterval !== 'undefined' && liveTrackingInterval) {
+                clearInterval(liveTrackingInterval);
+            }
+        }
+    </script>
 </body>
 </html>
